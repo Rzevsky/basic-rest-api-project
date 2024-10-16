@@ -1,14 +1,26 @@
 package com.rzevsky.basic_rest_api_project.models;
 
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
+
+@Entity
 @Data
-//@AllArgsConstructor
+@NoArgsConstructor
+@AllArgsConstructor
 @Builder
+@Table(name = "students")
 public class Student {
-    private String name;
-    private String email;
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+
+    private String name;
+
+//    @Column(unique = true)
+    private String email;
 }
