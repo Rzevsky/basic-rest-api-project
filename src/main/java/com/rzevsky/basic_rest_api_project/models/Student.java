@@ -4,10 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 
-import java.io.Serializable;
-
 @Data
-@AllArgsConstructor
+//@AllArgsConstructor
 @Builder
 public class Student {
     private String name;
