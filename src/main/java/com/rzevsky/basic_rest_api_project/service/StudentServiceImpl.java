@@ -13,12 +13,12 @@ import java.util.List;
 public class StudentServiceImpl implements StudentService {
     private StudentRepository studentRepository;
 
-//    @PostConstruct // создание болванчика сразу после инициализации бина
-//    private void init() {
-//        if (studentRepository.count() == 0) {
-//            studentRepository.save(Student.builder().name("Post Construct").email("postconstruct@mail.ee").build());
-//        }
-//    }
+    @PostConstruct // создание болванчика сразу после инициализации бина
+    private void init() {
+        if (studentRepository.count() == 0) {
+            studentRepository.save(Student.builder().name("Post Construct").email("postconstruct@mail.ee").build());
+        }
+    }
 
     public List<Student> getAllStudents() {
         return studentRepository.findAll();

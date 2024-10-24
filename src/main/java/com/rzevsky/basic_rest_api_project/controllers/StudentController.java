@@ -45,5 +45,4 @@ public class StudentController {
         headers.setLocation(URI.create("/"));
         return new ResponseEntity<>(headers, HttpStatus.FOUND);
     }
-
 }
